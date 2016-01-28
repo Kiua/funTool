@@ -14,7 +14,7 @@ echo "By:killua ";
 //判断表单提交内容是否为空
 if($_POST['u'] !=""){
 $url = "http://www.missevan.com/sound/".$_POST['u'];
-ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727;http://www.baidu.com)'); //设置ua,防止抓取网页内容失败败
+ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727;http://www.baidu.com)'); //设置ua,防止抓取网页内容失败
 $contents = @file_get_contents($url); //关闭报错
 //很烂的正则匹配
 preg_match('/[0-9]{0,}\/[0-9]{0,2}\/[0-9a-z]{32,38}\.mp3/', $contents, $match); 
